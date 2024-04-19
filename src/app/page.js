@@ -1,13 +1,15 @@
-import Footer from "./_Component/Footer";
-import Hero from "./_Component/Hero";
-import Testimonials from "./_Component/Testimonials";
+import { Main } from "./_Component/Main";
+
 
 export default function Home() {
+  
   return (
     <>
-    <Hero/>
-    <Testimonials/>
-    <Footer/>
+    {/* <Hero/> */}
+    <Main/>
+    
+    {/* <Testimonials/> */}
+    {/* <Footer/> */}
     </>
   );
 }

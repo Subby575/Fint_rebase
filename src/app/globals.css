@@ -3,3 +3,35 @@
 @tailwind utilities;
 
 
+*{
+margin:0;
+padding:0;
+font-family:'Poppins',sans-serif;
+box-sizing:border-box;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background-color: #85FFBD;
+    background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+    
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background-color: #85FFBD;
+background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 50%, #2dfce3 100%);
+
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #85FFBD;
+background-image: linear-gradient(45deg, #85FFBD 0%, #fef84b 50%, #2dfce3 100%);
+
+  }

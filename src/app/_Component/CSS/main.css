@@ -1,0 +1,47 @@
+a {
+	color: skyblue;
+	font-weight: bold;
+  }
+  
+  .main {
+	margin: 40px auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  }
+.metal {
+	position: relative;
+	margin: 15vh auto;
+	color: transparent;
+	font-family: impact, sans-serif;
+	font-size: 25vw;
+	letter-spacing: 0.05em;
+	background-image: var(--metal-tex);
+	background-size: cover;
+	background-clip: text;
+	-webkit-background-clip: text;
+  }
+  
+  .texture,
+  .texture::after {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+  }
+	
+  .texture {
+	background-image: linear-gradient(to bottom, blue, white 50%, red 65%, white);
+	background-attachment: fixed;
+	mix-blend-mode: color-dodge;
+  }
+  
+  .texture::after {
+	content: '';
+	background-image: var(--metal-tex);
+	background-size: cover;
+	filter: saturate(0) brightness(0.8) contrast(4);
+	mix-blend-mode: multiply;
+  }

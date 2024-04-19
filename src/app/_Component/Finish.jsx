@@ -16,15 +16,15 @@ const style = {
   p: 4,
 };
 
-export default function Finish({params}) {
+export default function Finish({params,pro}) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  console.log("uuu"+params);
-  var k=params.slice(4,6);
-  Number(k);
-  k++;
-  const n=params.slice(0,4)+k;
+  // var k=params.slice(4,6);
+  Number(pro);
+  pro++;
+  const n=params+pro;
+  // console.log("uuu"+n);
   return (
     <div>
       <Button className='p-1 bg-emerald-500 text-teal-100 hover:text-teal-700 hover:bg-emerald-200' onClick={handleOpen}>Finish</Button>

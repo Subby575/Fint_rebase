@@ -1,6 +1,6 @@
 import React from 'react'
 import '../_Component/CSS/start.css'
-import logo from '@/Images/image.png'
+
 
 import mutu from '@/Charac/mutu.jpg'
 import fixed from '@/Charac/fixed.jpg'
@@ -25,79 +25,46 @@ import challengeshad from '@/Charac/challengeshad.png'
 
 import Image from 'next/image'
 import Link from 'next/link'
+import Navbar from '../_Component/Navbar'
 const page = () => {
+  // console.log(data)
   return (
     <>
-      <header>
-        <div className="navbar bg-base-100 border-x-20 border-teal-400">
-          <div className="flex-1">
-            <Image className='ml-4' src={logo} height={50} width={50} />
-          </div>
-          <div className='flex-1'>
-            <a class="flex order-first lg:order-none title-font font-medium items-centerlg:items-center lg:justify-center mb-4 md:mb-0">
-            </a>
-          </div>
-
-          <div className="flex-none gap-1">
-            <div className="form-control">
-              {/* <div className="mb-1 text-base font-medium text-green-700 dark:text-green-500">Level 1<span className='ml-20'><b> 80 xp</b></span></div>
-        <div className="w-full bg-gray-200 rounded-full h-2 mb-4 dark:bg-gray-700">
-          <div className="bg-blue-600 h-2.5 rounded-full dark:bg-blue-500 " style={{ width: `80%` }} ></div>
-  </div>*/}
-            </div>
-            <div className="dropdown dropdown-end">
-              <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                <div className="w-10 rounded-full">
-                  <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                </div>
-              </div>
-              <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
-                <li>
-                  <a className="justify-between">
-                    Profile
-                    <span className="badge">New</span>
-                  </a>
-                </li>
-                <li><a>Logout</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </header>
+<Navbar/>
 
 
-      <div class="bg-white  py-4">
-        <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
-          <div class="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12">
-            <div class="flex items-center gap-12">
+      <div  className="bg-white  py-4">
+        <div  className="mx-auto max-w-screen-2xl px-4 md:px-8">
+          <div  className="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12">
+            <div  className="flex items-center gap-12">
               <h1 className='p-5 rounded-lg text-2xl bg-teal-600 text-gray-100'>1</h1>
-              <h2 class="text-2xl font-bold text-gray-800 lg:text-3xl">Intro to Finance Management </h2>
+              <h2  className="text-2xl font-bold text-gray-800 lg:text-3xl">Intro to Finance Management </h2>
 
-              <p class="hidden max-w-screen-sm text-gray-500 md:block">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text.</p>
+              <p  className="hidden max-w-screen-sm text-gray-500 md:block">"Discover essential finance concepts. From budgeting to investing, equip yourself with the knowledge and tools to navigate the complexities of financial management."</p>
             </div>
           </div>
         </div>
       </div>
       <div className='flex intro align-center justify-center'>
-        <Link href="/Learn/mutu1" alt="Mythrill">
-          <div class="card">
-            <div class="wrapper">
-              <Image src={intro} class="cover-image" />
+        <Link href="/Learn/intr1" alt="Mythrill">
+          <div  className="card">
+            <div  className="wrapper">
+              <Image src={intro}  className="cover-image" />
             </div>
             <h1 className='title mt-32 ml-5 '><span className='text-xl text-gray-900 bg-gradient-to-r from-amber-200 to-yellow-500 px-6 rounded-lg '>Introduction</span></h1>
-            <Image src={introshad} class="character" />
+            <Image src={introshad}  className="character mt-20" />
           </div>
         </Link>
       </div>
 
-      <div class="bg-white pb-12 pt-16">
-        <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
-          <div class="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12">
-            <div class="flex items-center gap-12">
+      <div  className="bg-white pb-12 pt-16">
+        <div  className="mx-auto max-w-screen-2xl px-4 md:px-8">
+          <div  className="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12">
+            <div  className="flex items-center gap-12">
               <h1 className='p-5 rounded-lg text-2xl bg-slate-800 text-gray-100'>2</h1>
-              <h2 class="text-2xl font-bold text-gray-800 lg:text-3xl">Learning Modules</h2>
+              <h2  className="text-2xl font-bold text-gray-800 lg:text-3xl">Learning Modules</h2>
 
-              <p class="hidden max-w-screen-sm text-gray-500 md:block">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text.</p>
+              <p  className="hidden max-w-screen-sm text-gray-500 md:block">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text.</p>
             </div>
           </div>
         </div>
@@ -109,78 +76,78 @@ const page = () => {
 
 
         <Link href="/Learn/mutu1" alt="Mythrill">
-          <div class="card">
-            <div class="wrapper">
-              <Image src={mutu} class="cover-image" />
+          <div  className="card">
+            <div  className="wrapper">
+              <Image src={mutu}  className="cover-image" />
             </div>
             <h1 className='title mt-32 ml-3 '><span className='text-xl text-gray-900 bg-emerald-200 px-6 rounded-lg '>MutualFunds</span></h1>
-            <Image src={mutushadow} class="character" />
+            <Image src={mutushadow}  className="character" />
           </div>
         </Link>
 
 
 
-        <Link href="/Learn/mutu1" alt="Mythrill">
-          <div class="card">
-            <div class="wrapper">
-              <Image src={savings} class="cover-image" />
+        <Link href="/Learn/insu1" alt="Mythrill">
+          <div  className="card">
+            <div  className="wrapper">
+              <Image src={savings}  className="cover-image" />
             </div>
-            <h1 className='title mt-32 ml-16'><span className='text-xl bg-gradient-to-r from-slate-500 to-slate-800 text-gray-100  px-3 rounded-lg -mr-4'>Savings</span></h1>
-            <Image src={savingsshad} class="character" />
+            <h1 className='title mt-32 ml-16'><span className='text-xl bg-gradient-to-r from-slate-500 to-slate-800 text-gray-100  px-3 rounded-lg -mr-4'>Insurance</span></h1>
+            <Image src={savingsshad}  className="character" />
           </div>
         </Link>
 
-        <Link href="/Learn/mutu1" alt="Mythrill">
-          <div class="card">
-            <div class="wrapper">
-              <Image src={fixed} class="cover-image" />
+        <Link href="/Learn/real1" alt="Mythrill">
+          <div  className="card">
+            <div  className="wrapper">
+              <Image src={fixed}  className="cover-image" />
             </div>
-            <h1 className='title mt-32 ml-4 '><span className='text-xl text-gray-900 bg-gradient-to-r from-amber-200 to-yellow-500 px-6 rounded-lg '>LiquidFunds</span></h1>
-            <Image src={fixedshad} class="character" />
+            <h1 className='title mt-32 ml-4 '><span className='text-xl text-gray-900 bg-gradient-to-r from-amber-200 to-yellow-500 px-6 rounded-lg '>RealEstate</span></h1>
+            <Image src={fixedshad}  className="character" />
           </div>
         </Link>
 
-        <Link href="/Learn/mutu1" alt="Mythrill">
-          <div class="card">
-            <div class="wrapper">
-              <Image src={liqu} class="cover-image" />
+        <Link href="/Learn/fide1" alt="Mythrill">
+          <div  className="card">
+            <div  className="wrapper">
+              <Image src={liqu}  className="cover-image" />
             </div>
             <h1 className='title mt-32  ml-6'><span className='text-xl bg-gradient-to-r from-slate-900 to-slate-700 text-white  px-3 rounded-lg -mr-4'>FixedDeposit</span></h1>
-            <Image src={liqushad} class="character" />
+            <Image src={liqushad}  className="character" />
           </div>
         </Link>
 
-        <Link href="/Learn/mutu1" alt="Mythrill">
-          <div class="card">
-            <div class="wrapper">
-              <Image src={stocks} class="cover-image" />
+        <Link href="/Learn/stma1" alt="Mythrill">
+          <div  className="card">
+            <div  className="wrapper">
+              <Image src={stocks}  className="cover-image" />
             </div>
             <h1 className='title mt-32  ml-6'><span className='text-xl bg-gradient-to-r from-indigo-400 to-cyan-400 text-gray-900  px-3 rounded-lg -mr-4'>StockMarket</span></h1>
-            <Image src={stockshad} class="character" />
+            <Image src={stockshad}  className="character" />
           </div>
         </Link>
 
       </div>
-      <div class="bg-white pb-12 pt-16">
-        <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
-          <div class="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12">
-            <div class="flex items-center gap-12">
+      <div  className="bg-white pb-12 pt-16">
+        <div  className="mx-auto max-w-screen-2xl px-4 md:px-8">
+          <div  className="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12">
+            <div  className="flex items-center gap-12">
               <h1 className='p-5 rounded-lg text-2xl bg-red-950 text-gray-100'>3</h1>
-              <h2 class="text-2xl font-bold text-gray-800 lg:text-3xl">Challenges </h2>
+              <h2  className="text-2xl font-bold text-gray-800 lg:text-3xl">Challenges </h2>
 
-              <p class="hidden max-w-screen-sm text-gray-500 md:block">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text.</p>
+              <p  className="hidden max-w-screen-sm text-gray-500 md:block">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text.</p>
             </div>
           </div>
         </div>
       </div>
       <div className='flex chal align-center justify-center'>
-        <Link href="/Learn/mutu1" alt="Mythrill">
-          <div class="card">
-            <div class="wrapper">
-              <Image src={challenge} class="cover-image" />
+        <Link href="/Challenge" alt="Mythrill">
+          <div  className="card">
+            <div  className="wrapper">
+              <Image src={challenge}  className="cover-image" />
             </div>
             <h1 className='title mt-32 ml-5 '><span className='text-xl text-gray-100 bg-gradient-to-r from-red-500 to-orange-500 px-6 rounded-lg '>Challenge</span></h1>
-            <Image src={challengeshad} class="character" />
+            <Image src={challengeshad}  className="character" />
           </div>
         </Link>
       </div>

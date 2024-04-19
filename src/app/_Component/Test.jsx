@@ -2,58 +2,38 @@
 import { useState } from 'react'
 import CircularProgress from '@mui/joy/CircularProgress';
 // import { quiz } from '../../data/questions'
-import './Test.css'
+import bg from '@/Charac/bg1.jpeg'
+import '@/app/_Component/CSS/Test.css'
 import img from '@/app/Mascot/happy.gif'
-import { PieChart } from '@mui/x-charts/PieChart';
+import ok from '@/app/Mascot/ok.jpg'
+
+import {quizzes} from '@/quiz.js'
 
 import sad from '@/app/Mascot/sadd.gif'
 import Image from 'next/image'
-const Quiz = () => {
-  const quiz = {
-    topic: 'Javascript',
-    level: 'Beginner',
-    totalQuestions: 4,
-    perQuestionScore: 5,
-    questions: [
-      {
-        question: 'Which function is used to serialize an object into a JSON string in Javascript?',
-        choices: ['stringify()', 'parse()', 'convert()', 'None of the above'],
-        type: 'MCQs',
-        correctAnswer: 'stringify()',
-      },
-      {
-        question: 'Which of the following keywords is used to define a variable in Javascript?',
-        choices: ['var', 'let', 'var and let', 'None of the above'],
-        type: 'MCQs',
-        correctAnswer: 'var and let',
-      },
-      {
-        question:
-          'Which of the following methods can be used to display data in some form using Javascript?',
-        choices: ['document.write()', 'console.log()', 'window.alert', 'All of the above'],
-        type: 'MCQs',
-        correctAnswer: 'All of the above',
-      },
-      {
-        question: 'How can a datatype be declared to be a constant type?',
-        choices: ['const', 'var', 'let', 'constant'],
-        type: 'MCQs',
-        correctAnswer: 'const',
-      },
-    ],
-  }
-  const [activeQuestion, setActiveQuestion] = useState(0)
-  const [selectedAnswer, setSelectedAnswer] = useState('')
-  const [showResult, setShowResult] = useState(false)
-  const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null)
-  const [result, setResult] = useState({
-    score: 0,
-    correctAnswers: 0,
-    wrongAnswers: 0,
-  })
 
-  const { questions } = quiz
-  const { question, choices, correctAnswer } = questions[activeQuestion]
+const Quiz = ({params}) => {
+  const currentQuiz = quizzes.find(quiz => quiz.mod === params);
+
+  var pa=params.slice(0,4);
+
+// Destructure the content from the current quiz
+const { content } = currentQuiz;
+
+const [activeQuestion, setActiveQuestion] = useState(0);
+const [selectedAnswer, setSelectedAnswer] = useState('');
+const [showResult, setShowResult] = useState(false);
+const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
+const [result, setResult] = useState({
+  score: 0,
+  correctAnswers: 0,
+  wrongAnswers: 0,
+});
+
+// Access questions from content
+const { questions } = content[0];
+
+const { question, choices, correctAnswer } = questions[activeQuestion];
 
   const onClickNext = () => {
     setSelectedAnswerIndex(null)
@@ -87,9 +67,9 @@ const Quiz = () => {
 
 
   return (
-    
-    <div className="quiz-container">
-       
+    <>
+       <Image className='absolute z-10 h-screen w-screen' src={bg}/>
+    <div className="quiz-container z-20">
       {!showResult ? (
         <div>
           <div>
@@ -119,18 +99,18 @@ const Quiz = () => {
         
 
           <h3>Result</h3>
-          <div className='ml-16'>
+          <div className='ml-36'>
           
-          <CircularProgress color="primary" sx={{ '--CircularProgress-size': '80px' }} determinate value={(result.correctAnswers/quiz.totalQuestions)*100}>
-          {(result.correctAnswers/quiz.totalQuestions)*100 }%
+          <CircularProgress color="primary" sx={{ '--CircularProgress-size': '80px' }} determinate value={(result.correctAnswers/5)*100}>
+          {(result.correctAnswers/5)*100 }%
       </CircularProgress>
       </div>
       {/* <!-- question - start --> */}
-      <div class="border-b">
-        <div class="flex cursor-pointer justify-between gap-2 py-4 text-black hover:text-indigo-500 active:text-indigo-600">
-          <span class="font-semibold transition duration-100 md:text-lg"> Total Question: </span>
+      <div  className="border-b">
+        <div  className="flex cursor-pointer justify-between gap-2 py-4 text-black hover:text-indigo-500 active:text-indigo-600">
+          <span  className="font-semibold transition duration-100 md:text-lg"> Total Question: </span>
 
-          <span class="text-indigo-500 text-xl">
+          <span  className="text-indigo-500 text-xl">
           {questions.length}
           </span>
         </div>
@@ -141,66 +121,58 @@ const Quiz = () => {
   
 
       <!-- question - start --> */}
-      <div class="border-b">
-        <div class="flex cursor-pointer justify-between gap-2 py-4 text-black hover:text-indigo-500 active:text-indigo-600">
-          <span class="font-semibold transition duration-100 md:text-lg">Correct Answers:</span>
+      <div  className="border-b">
+        <div  className="flex cursor-pointer justify-between gap-2 py-4 text-black hover:text-indigo-500 active:text-indigo-600">
+          <span  className="font-semibold transition duration-100 md:text-lg">Correct Answers:</span>
 
-          <span class="text-indigo-500 text-xl">
+          <span  className="text-indigo-500 text-xl">
           {result.correctAnswers}
           </span>
         </div>
       </div>
-      <div class="border-b">
-        <div class="flex cursor-pointer justify-between gap-2 py-4 text-black  active:text-indigo-600">
-          <span class="font-semibold transition duration-100 md:text-lg">Wrong Answers:</span>
+      <div  className="border-b">
+        <div  className="flex cursor-pointer justify-between gap-2 py-4 text-black  active:text-indigo-600">
+          <span  className="font-semibold transition duration-100 md:text-lg">Wrong Answers:</span>
 
-          <span class="text-indigo-500 text-xl">
+          <span  className="text-indigo-500 text-xl">
           {result.wrongAnswers}
           </span>
       
       </div>
-   
-    {/* <div >
-          <p>
-            Total Question: <span>{questions.length}</span>
-          </p>
-          <p>
-            Total Score:<span> {result.score}</span>
-          </p>
-          <p>
-            Correct Answers:<span> {result.correctAnswers}</span>
-          </p>
-          <p>
-            Wrong Answers:<span> {result.wrongAnswers}</span>
-          </p>
-          </div> */}
-          {/* <PieChart
-         
-         series={[
-           {
-             data: [
-               { id: 0, value: result.correctAnswers, label: 'Correct' },
-               { id: 1, value:result.wrongAnswers, label: 'Wrong' },
-             ],
-           },
-         ]}
-         width={300}
-         height={200}
-       /> */}
         </div>
         </div>
 
         {
-          result.wrongAnswers>quiz.totalQuestions/2?
-          <Image src={sad}/>
+          result.wrongAnswers>5/2?
+          <Image src={sad} className='ml-20'/>
           :
-          <Image src={img}/>
+          result.correctAnswers==5
+          ?
+          <Image src={img} className='ml-20'/>
+          :
+          <Image src={ok} className='ml-20'/>
+          
          
         }
-        
+        {
+          pa==4?
+          <a href={`/Path`}> <button className='ml-3'>Go to Another Module</button>
+          </a>
+     
+       :
+       <>
+       <div className='flex'>
+       <a href={`/Learn/${pa}6`}> <button className='ml-3'>Continue</button>
+       </a>
+       <a href={`/Path`}> <button className='ml-3'>Read Module</button>
+       </a>
+       </div>
+        </>
+        }
         </>
       )}
     </div>
+    </>
   )
 }
 

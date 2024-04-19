@@ -1,17 +1,28 @@
 import React from 'react'
-import img from './../../Images/mutual.jpg'
-import logo from './../../Images/image.png'
+
+
+
+import mutu from '@/Charac/mutu.jpg'
+import intro from '@/Charac/intro.jpg'
+import liqu from '@/Charac/liqu.jpg'
+import stocks from '@/Charac/stocks.jpg'
+import savings from '@/Charac/savings.jpg'
+import fixed from '@/Charac/fixed.jpg'
+
+
+
 import Image from 'next/image'
-import List from './StackedList'
+
 import StackedList from './StackedList'
 import Divider from '@mui/material/Divider';
-import Chal from './Chal'
 import Locked from './Locked'
-import './Fixed/fix.css'
+import './CSS/fix.css'
 const Modules = ({ params }) => {
   var k = params.slice(4, 5);
+  const q=params.slice(0,4);
   Number(k);
   k--;
+  // console.log("hello"+q);
   const y = params;
   var t = 5;
   const per = (k / t) * 100;
@@ -19,47 +30,33 @@ const Modules = ({ params }) => {
   return (
     <>
 
-      <header>
-        <div className="navbar bg-base-100">
-          <div className="flex-1">
-            <Image className='ml-4' src={logo} height={50} width={50} />
-          </div>
-          <div className='flex-1'>
-            <a class="flex order-first lg:order-none title-font font-medium items-centerlg:items-center lg:justify-center mb-4 md:mb-0">
-              <span class=" mt-2 text-emerald-100 text-xl">Mutual funds: Lorem, ipsum dolor.</span>
-            </a>
-            </div>
-
-          <div className="flex-none gap-1">
-            <div className="form-control">
-              {/* <div className="mb-1 text-base font-medium text-green-700 dark:text-green-500">Level 1<span className='ml-20'><b> 80 xp</b></span></div>
-        <div className="w-full bg-gray-200 rounded-full h-2 mb-4 dark:bg-gray-700">
-          <div className="bg-blue-600 h-2.5 rounded-full dark:bg-blue-500 " style={{ width: `80%` }} ></div>
-  </div>*/}
-            </div>
-            <div className="dropdown dropdown-end">
-              <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                <div className="w-10 rounded-full">
-                  <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                </div>
-              </div>
-              <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
-                <li>
-                  <a className="justify-between">
-                    Profile
-                    <span className="badge">New</span>
-                  </a>
-                </li>
-                <li><a>Logout</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </header>
-      <div class="flex-container">
+      <a className='bg-gray-200 px-3 py-2 rounded-lg text-black' href='/Path'><button>&lt;Back</button></a>
+      <div  className="flex-container">
         <aside className='object-center'>
-
-          {/* <Image className='object-fill pt-0 h-screen p-3' src={img}/> */}
+          {
+            q=="mutu"
+            ?
+            <Image className='object-fill pt-0 h-screen p-3' src={mutu}/>
+            :
+            q=="intr"
+            ?
+            <Image className='object-fill pt-0 h-screen p-3' src={intro}/>
+            :
+            q=="stma"
+            ?
+            <Image className='object-fill pt-0 h-screen p-3' src={stocks}/>
+            :
+            q=="fide"
+            ?
+            <Image className='object-fill pt-0 h-screen p-3' src={liqu}/>
+            :
+            q=="insu"
+            ?
+            <Image className='object-fill pt-0 h-screen p-3' src={savings}/>
+            :
+            <Image className='object-fill pt-0 h-screen p-3' src={fixed}/>
+          }
+          
         </aside>
         <main>
           {/* <StackedList /> */}
@@ -82,16 +79,17 @@ const Modules = ({ params }) => {
             </div>
           </div>
           <StackedList params={y} />
+
         </main>
       </div>
       <div>
 
         {/* <Divider/> */}
-        <div class="  mt-3 pt-3">
-          <div class="max-w-screen-2xl ">
+        <div  className="  mt-3 pt-3">
+          <div  className="max-w-screen-2xl ">
             {/* <!-- text - start --> */}
-            <div class=" ">
-              <h2 class=" text-center text-2xl font-bold text-gray-200  lg:text-3xl">Quiz</h2>
+            <div  className=" ">
+              <h2  className=" text-center text-2xl font-bold text-gray-200  lg:text-3xl">Quiz</h2>
             </div>
           </div>
           <div className='mt-3 mb-3'>
@@ -100,7 +98,7 @@ const Modules = ({ params }) => {
           </div>
         </div>
         {
-          per < 79
+          per < 81
             ?
             <>
               <div>
@@ -112,16 +110,17 @@ const Modules = ({ params }) => {
             :
             <>
             <div>
-                 <div class="grid grid-cols-3 gap-8 md:grid-cols-3 my-12 md:gap-0 md:divide-x">
+                 <div  className="grid grid-cols-3 gap-8 md:grid-cols-3 my-12 md:gap-0 md:divide-x">
       {/* <!-- stat - start --> */}
      
         {
           a.map((e)=>(
             <>
-            <div class="flex flex-col items-center md:p-4">
-        <div class="text-xl font-bold text-teal-500 sm:text-2xl md:text-3xl">
-          <a href='/Quiz'>Quiz {e+1}</a></div>
-        <div class="text-sm font-semibold sm:text-base">Score : 70 %</div>
+            <div  className="flex flex-col items-center md:p-4">
+        <div  className="text-xl font-bold text-teal-500 sm:text-2xl md:text-3xl">
+          Quiz {e+1}</div>
+        {/* <div  className="text-sm font-semibold sm:text-base py-2">Score : 70 %</div> */}
+        <a href={`/Quiz/${q}${e+1}`}> <button className='bg-green-300 py-1 px-3 text-slate-800 my-2 rounded-lg  hover:scale-110'>Start</button></a>
         </div>
           </>
           ))
