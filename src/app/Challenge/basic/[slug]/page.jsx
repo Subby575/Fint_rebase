@@ -3,7 +3,7 @@ import { usePathname } from 'next/navigation'
 import Game from '@/app/_Component/Game'
 import React from 'react'
 import '@/app/_Component/CSS/basic.css'
-const page = () => {
+const Page = () => {
   const path = usePathname();
   const pa = path.slice(17, 19);
   // console.log(pa)
@@ -20,4 +20,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
