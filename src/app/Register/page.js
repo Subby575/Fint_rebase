@@ -3,9 +3,9 @@ import Register from "../_Component/Register";
 const page = () => {
   return (
     <>
-      <div className="h-full bg-gradient-to-r from-green-300 to-teal-800">
+      <div className="h-screen bg-gradient-to-r from-green-300 to-teal-800">
         <Register/>
-      </div>
+      
       <div  className="bg-gradient-to-r from-green-300 to-teal-800 pb-6 sm:pb-8 lg:pb-12">
         {/* <!-- banner - start --> */}
         <div  className="relative flex flex-wrap bg-gradient-to-r from-emerald-500 to-emerald-900 px-4 py-3 sm:flex-nowrap sm:items-center sm:justify-center sm:gap-3 sm:pr-8 md:px-8">
@@ -27,6 +27,7 @@ const page = () => {
           {/* <!-- close button - end --> */}
         </div>
         {/* <!-- banner - end --> */}
+      </div>
       </div>
     </>
   );

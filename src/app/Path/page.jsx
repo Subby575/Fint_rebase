@@ -40,7 +40,7 @@ const page = () => {
               <h1 className='p-5 rounded-lg text-2xl bg-teal-600 text-gray-100'>1</h1>
               <h2  className="text-2xl font-bold text-gray-800 lg:text-3xl">Intro to Finance Management </h2>
 
-              <p  className="hidden max-w-screen-sm text-gray-500 md:block">"Discover essential finance concepts. From budgeting to investing, equip yourself with the knowledge and tools to navigate the complexities of financial management."</p>
+              <p  className="hidden max-w-screen-sm text-gray-500 md:block">Discover essential finance concepts. From budgeting to investing, equip yourself with the knowledge and tools to navigate the complexities of financial management.</p>
             </div>
           </div>
         </div>

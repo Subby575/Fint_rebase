@@ -44,7 +44,7 @@ const page = () => {
   var i=0;
   console.log("now" + p)
   const theme = useTheme();
-  const [activeStep, setActiveStep] = React.useState(0);
+  const [activeStep, setActiveStep] = useState(0);
   const maxSteps = arr.length;
   //console.log("yy" + params);
 

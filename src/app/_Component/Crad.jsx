@@ -32,7 +32,7 @@ const Crad = () => {
                 {
 
                   arr.map((s) => (
-                    <a href={`${e.link[s]}`}>
+                    <a href={`${e.link[s]}`} key={`${s}`}>
                     <div className="card">
                       <h2 className='text-teal-300'>Choice {s + 1}</h2>
                       <p>{e.option[s]}</p>

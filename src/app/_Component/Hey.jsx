@@ -1,6 +1,6 @@
 import React from 'react'
 import "@/app/_Component/CSS/Hey.css"
-
+import Modal from "@/app/_Component/Finish"
 import Box from '@mui/material/Box';
 import { useTheme } from '@mui/material/styles';
 import MobileStepper from '@mui/material/MobileStepper';

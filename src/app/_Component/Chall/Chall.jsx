@@ -14,7 +14,7 @@ const Chall = () => {
       <h2 className='bg-emerald-200 w-16 pl-2 text-slate-700 rounded-lg'>Basic</h2>
       <div  className="icons">
       <div className='para w-full'>
-        <p className='mb-96 bg-gradient-to-r from-slate-300 to-slate-500 text-gray-600 rounded-lg  px-3 w-72 h-1/2 pt-16 text-4xl '>Vishal's<br></br> Royal Enfield</p>
+        <p className='mb-96 bg-gradient-to-r from-slate-300 to-slate-500 text-gray-600 rounded-lg  px-3 w-72 h-1/2 pt-16 text-4xl '>Vishal&apos;s<br/> Royal Enfield</p>
 
        </div>
       </div>
