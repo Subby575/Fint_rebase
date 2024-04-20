@@ -2,7 +2,7 @@
 import { usePathname } from 'next/navigation'
 import React from 'react'
 import Game from '../../_Component/Game'
-const page = () => {
+const Page = () => {
   const path=usePathname();
   const pa=path.slice();
   console.log(pa)
@@ -15,4 +15,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
