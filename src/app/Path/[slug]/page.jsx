@@ -1,6 +1,8 @@
-import React from 'react'
-import '../_Component/CSS/start.css'
 
+"use client"
+import React from 'react'
+import '@/app/_Component/CSS/start.css'
+import { usePathname } from 'next/navigation'
 
 import mutu from '@/Charac/mutu.jpg'
 import fixed from '@/Charac/fixed.jpg'
@@ -25,12 +27,17 @@ import challengeshad from '@/Charac/challengeshad.png'
 
 import Image from 'next/image'
 import Link from 'next/link'
-import Navbar from '../_Component/Navbar'
-const page = () => {
+import Navbar from '../../_Component/Navbar'
+const Page = () => {
+  const path=usePathname();
+  const pa=path.slice(6,20);
+  // const u=pa.slice(0,1);
+  var str=pa.replace("%20"," ");
+  console.log(pa)
   // console.log(data)
   return (
     <>
-      <Navbar />
+      <Navbar params={str} />
 
 
       <div className="bg-white  py-4">
@@ -64,7 +71,7 @@ const page = () => {
               <h1 className='p-5 rounded-lg text-2xl bg-slate-800 text-gray-100'>2</h1>
               <h2 className="text-2xl font-bold text-gray-800 lg:text-3xl">Learning Modules</h2>
 
-              <p className="hidden max-w-screen-sm text-gray-500 md:block">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text.</p>
+              <p className="hidden max-w-screen-sm text-gray-500 md:block">Unlock the secrets of finance with engaging lessons on stocks, mutual funds, budgeting, and more in our interactive learning module.</p>
             </div>
           </div>
         </div>
@@ -148,7 +155,7 @@ const page = () => {
               <h1 className='p-5 rounded-lg text-2xl bg-red-950 text-gray-100'>3</h1>
               <h2 className="text-2xl font-bold text-gray-800 lg:text-3xl">Challenges </h2>
 
-              <p className="hidden max-w-screen-sm text-gray-500 md:block">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text.</p>
+              <p className="hidden max-w-screen-sm text-gray-500 md:block">Conquer financial challenges head-on, from market volatility to budgeting dilemmas, and emerge with valuable skills and insights.</p>
             </div>
           </div>
         </div>
@@ -169,4 +176,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

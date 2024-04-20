@@ -60,7 +60,7 @@ const Lead = () => {
 
   return (
     <>
-    <a href='/Path'>
+    <a href='/Path/'>
       <button className='bg-gray-200 px-3 py-2 rounded-md text-black ml-4 mt-2'>&lt; Back</button></a>
     <div className="Leaderboard w-3/4 h-3/4 text-black rounded-lg bg-transparent overflow-hidden mt-0 ">
       <Head>

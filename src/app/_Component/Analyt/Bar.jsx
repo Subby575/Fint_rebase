@@ -8,62 +8,62 @@ const chartSetting = {
     },
   ],
   width: 500,
-  height: 400,
+  height: 300,
 };
 const dataset = [
   {
-    london: 59,
-    paris: 57,
-    newYork: 86,
-    seoul: 21,
+    london: 3,
+    paris: 3,
+    newYork: 6,
+    seoul: 1,
     month: 'Sun',
   },
   {
-    london: 50,
-    paris: 52,
-    newYork: 78,
-    seoul: 28,
+    london: 0,
+    paris: 2,
+    newYork: 3,
+    seoul: 3,
     month: 'Mon',
   },
   {
-    london: 47,
-    paris: 53,
-    newYork: 106,
-    seoul: 41,
+    london: 3,
+    paris: 3,
+    newYork: 6,
+    seoul: 4,
     month: 'Tues',
   },
   {
-    london: 54,
-    paris: 56,
-    newYork: 92,
-    seoul: 73,
+    london: 5,
+    paris: 5,
+    newYork: 3,
+    seoul: 3,
     month: 'Wed',
   },
   {
-    london: 57,
-    paris: 69,
-    newYork: 92,
-    seoul: 99,
+    london: 5,
+    paris: 6,
+    newYork: 3,
+    seoul: 3,
     month: 'Thurs',
   },
   {
-    london: 60,
-    paris: 63,
-    newYork: 103,
-    seoul: 144,
+    london: 6,
+    paris: 3,
+    newYork: 3,
+    seoul: 4,
     month: 'Fri',
   },
   {
-    london: 59,
-    paris: 60,
-    newYork: 105,
-    seoul: 319,
+    london: 5,
+    paris: 6,
+    newYork: 5,
+    seoul: 1,
     month: 'Sat',
   },
 
 ];
 
-const valueFormatter = (value) => `${value}mm`;
+const valueFormatter = (value) => `${value}`;
 
 export default function HorizontalBars() {
   return (

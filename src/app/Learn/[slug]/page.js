@@ -4,7 +4,7 @@ import React from 'react'
 import {data} from '@/AllFint'
 import { usePathname } from 'next/navigation'
 import Modules from '@/app/_Component/Modules';
-import Navbar from '@/app/_Component/Navbar';
+// import Navbar from '@/app/_Component/Navbar';
 const Page = () => {
     const path=usePathname();
     const pa=path.slice(7,13);
@@ -12,7 +12,7 @@ const Page = () => {
     
   return (
     <>
-    <Navbar/>
+    {/* <Navbar/> */}
   <Modules params={pa}/>
     </>
   )
