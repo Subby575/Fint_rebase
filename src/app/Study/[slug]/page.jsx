@@ -1,6 +1,6 @@
 "use client"
+import React from 'react'
 import logo from '../../../Images/image.png'
-import React, { useEffect } from 'react'
 import { usePathname } from 'next/navigation';
 import Box from '@mui/material/Box';
 import { useTheme } from '@mui/material/styles';
@@ -20,8 +20,8 @@ const Page = () => {
   const path = usePathname();
   var p = path.slice(11, 13);
   const k = path.slice(7, 11);
-  console.log("parchi" + p);
-  console.log("kkk" + k);
+  // console.log("parchi" + p);
+  // console.log("kkk" + k);
   const arr = [
     {
       label: 'Select campaign settings form your phone',
@@ -43,7 +43,7 @@ const Page = () => {
     },
   ];
   var i=0;
-  console.log("now" + p)
+  // console.log("now" + p)
   const theme = useTheme();
   const [activeStep, setActiveStep] = useState(0);
   const maxSteps = arr.length;

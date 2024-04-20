@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation'
 const Page = () => {
   const path=usePathname();
   const mo=path.slice(6,11);
-  console.log("hello"+mo);
+  // console.log("hello"+mo);
   return (
     <>       
         <Quiz params={mo}/>
