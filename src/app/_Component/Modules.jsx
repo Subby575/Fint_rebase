@@ -30,7 +30,7 @@ const Modules = ({ params }) => {
   return (
     <>
 
-      <a className='bg-gray-200 px-3 py-2 rounded-lg text-black' href='/Path/Ark%20Adrian'><button>&lt;Back</button></a>
+      <a className='bg-gray-200 px-3 py-2 rounded-lg text-black' href='/Path/Subham%20Banerjee'><button>&lt;Back</button></a>
       <div  className="flex-container">
         <aside className='object-center'>
           {

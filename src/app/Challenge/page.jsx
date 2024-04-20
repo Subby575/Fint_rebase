@@ -11,7 +11,7 @@ const page = () => {
           <div className=" flex items-center justify-between gap-8 sm:mb-4 md:mb-6">
             <div className="flex items-center gap-12">
               <div className=''>
-              <a href='/Path/Ark%20Adrian'>
+              <a href='/Path/Subham%20Banerjee'>
               <button className='bg-gray-200 py-3 px-3 rounded-lg text-slate-800'>&lt; Back</button>
               </a>
               <h1 className="text-2xl font-bold text-gray-100 lg:text-5xl ml-20 bg-slate-800">Challenges</h1>
