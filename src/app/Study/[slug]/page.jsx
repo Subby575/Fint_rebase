@@ -6,6 +6,7 @@ import Box from '@mui/material/Box';
 import { useTheme } from '@mui/material/styles';
 import MobileStepper from '@mui/material/MobileStepper';
 import bg from '@/Images/gam.jpg'
+import { useState } from 'react';
 
 // import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
