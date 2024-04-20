@@ -7,7 +7,8 @@ import '@/app/_Component/CSS/main.css'
 import conf from '@/Images/conf.png'
 import arrow from '@/Images/arrow.png'
 import logo from '@/Images/image.png'
-import app from "../../../config.js"
+// import app from "../../../config.js"
+import app from "@/../config.js"
 import { getAuth } from "firebase/auth";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
@@ -50,7 +51,7 @@ export const Main = () => {
 
         <div className="grid max-w-screen-xl px-4  mx-auto lg:gap-8 xl:gap-0 lg:pt-32 lg:grid-cols-12 align-middle pt-56">
           <div className="mr-auto place-self-center lg:col-span-7">
-            <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-white">Chart Your Financial Future, Today's Decisions.</h1>
+            <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-white">Chart Your Financial Future, Today&apos;s Decisions.</h1>
             <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">Embark on a financial odyssey. Navigate our futuristic platform where decisions shape destiny. From sleek skyscrapers to neon futurescapes, chart your course to prosperity with expert guidance. Your journey starts now! </p>
 
             {
