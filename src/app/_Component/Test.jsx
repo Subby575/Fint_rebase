@@ -15,7 +15,10 @@ import Image from 'next/image'
 const Quiz = ({params}) => {
   const currentQuiz = quizzes.find(quiz => quiz.mod === params);
 
-  var pa=params.slice(0,4);
+  if (myArray !== undefined) {
+    var pa=params.slice(0,4); // Example slice usage
+  }
+ 
 
 // Destructure the content from the current quiz
 const { content } = currentQuiz;
