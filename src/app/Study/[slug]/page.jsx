@@ -15,7 +15,7 @@ import Image from 'next/image';
 // import stocks from './../../../public/stocks.jpg'
 import Modal from '@/app/_Component/Finish';
 import { materials } from '@/Materials.js';
-const page = () => {
+const Page = () => {
   const path = usePathname();
   var p = path.slice(11, 13);
   const k = path.slice(7, 11);
@@ -181,4 +181,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

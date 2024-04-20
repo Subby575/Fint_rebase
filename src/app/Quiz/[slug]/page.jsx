@@ -3,7 +3,7 @@ import Quiz from '@/app/_Component/Test'
 import React from 'react'
 import { usePathname } from 'next/navigation'
 
-const page = () => {
+const Page = () => {
   const path=usePathname();
   const mo=path.slice(6,11);
   console.log("hello"+mo);
@@ -16,4 +16,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

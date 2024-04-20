@@ -5,7 +5,7 @@ import {data} from '@/AllFint'
 import { usePathname } from 'next/navigation'
 import Modules from '@/app/_Component/Modules';
 import Navbar from '@/app/_Component/Navbar';
-const page = () => {
+const Page = () => {
     const path=usePathname();
     const pa=path.slice(7,13);
     console.log(data);
@@ -18,4 +18,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

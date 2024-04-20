@@ -6,7 +6,7 @@ import Line from '@/app/_Component/Analyt/Line'
 import Stack from '@/app/_Component/Analyt/Stack'
 import '@/app/_Component/CSS/profile.css'
 import { usePathname } from 'next/navigation'
-const page = () => {
+const Page = () => {
    const player=usePathname();
    const play=player.slice(9,16);
     return (
@@ -99,4 +99,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

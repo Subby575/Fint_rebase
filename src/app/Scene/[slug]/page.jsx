@@ -2,7 +2,7 @@
 import Crad from '@/app/_Component/Crad'
 import React from 'react'
 import { usePathname } from 'next/navigation'
-const page = () => {
+const Page = () => {
   const path=usePathname();
   const pa=path.slice(7,9)
   // console.log("yooo"+pa)
@@ -14,4 +14,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
