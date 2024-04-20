@@ -2,7 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
-<link rel="icon" href="@/Images/image.png" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
 export const metadata = {
   title: "Fint",
   description: "Money Management Made Easy ",

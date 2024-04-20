@@ -958,9 +958,7 @@ const { question, choices, correctAnswer } = questions[activeQuestion];
        :
        <>
        <div className='flex'>
-       <a href={`/Learn/${pa}6`}> <button className='ml-3'>Continue</button>
-       </a>
-       <a href={`/Path`}> <button className='ml-3'>Next Module</button>
+       <a href={`/Learn/${pa}6`}> <button className='ml-28'>Continue</button>
        </a>
        </div>
         </>

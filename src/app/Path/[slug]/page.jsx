@@ -33,7 +33,7 @@ const Page = () => {
   const pa=path.slice(6,20);
   // const u=pa.slice(0,1);
   var str=pa.replace("%20"," ");
-  console.log(pa)
+  // console.log(pa)
   // console.log(data)
   return (
     <>

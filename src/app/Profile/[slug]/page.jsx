@@ -11,7 +11,7 @@ import { getAuth, signOut, onAuthStateChanged } from 'firebase/auth'
 import app from "@/../config"
 const Page = () => {
    const player=usePathname();
-   const play=player.slice(9,40);
+   const play=player.slice(9,50);
    var plays=play.replace("%20"," ");
    const auth=getAuth();
    const router=useRouter();
