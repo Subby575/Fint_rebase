@@ -3,7 +3,7 @@ import Comic from '@/app/_Component/Question/Comic'
 import React from 'react'
 import '@/app/_Component/CSS/but.css'
 import { usePathname } from 'next/navigation'
-const page = () => {
+const Page = () => {
   const path = usePathname();
   const pa = path.slice(16, 18);
   console.log(pa);
@@ -37,4 +37,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
