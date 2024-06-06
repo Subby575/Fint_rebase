@@ -44,13 +44,13 @@ const Lead = () => {
     const data = {
       success: true,
       leaders: [
-        { id: 1, name: 'Uenify', score: 350 },
-        { id: 3, name: 'Kekland', score: 275 },
-        { id: 2, name: 'Madopew', score: 220 },
-        { id: 4, name: 'Yussend', score: 200 },
-        { id: 5, name: 'Admin', score: 175 },
-        { id: 6, name: 'dgud', score: 160 },
-        { id: 7, name: 'sjfeif', score: 152 }
+        { id: 1, name: 'Subham', score: 350 },
+        { id: 3, name: 'Ishaan', score: 275 },
+        { id: 2, name: 'Bharat', score: 220 },
+        { id: 4, name: 'Rupam', score: 200 },
+        { id: 5, name: 'Aneek', score: 175 },
+        { id: 6, name: 'Debanjan', score: 160 },
+        { id: 7, name: 'Sachin', score: 152 }
       ],
       maxScore: 500
     };
