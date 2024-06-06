@@ -27,7 +27,7 @@ import Image from 'next/image'
 const Comic = () => {
   const path=usePathname();
   const pa=path.slice(16,18);
-  console.log(pa);
+  // console.log(pa);
   const k=pa;
   const arr=["c7.png"]
   return (
